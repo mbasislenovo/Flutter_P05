@@ -1,4 +1,4 @@
-# flutter_p05
+# flutter_p05 (Tugas dari ART181-31149 Retno)
 
 A new Flutter project.
 Validator belum berjalan sebagaimana mestinya. 
