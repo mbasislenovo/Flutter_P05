@@ -47,8 +47,8 @@ class _DummyBoxState extends State<DummyBox> {
                                      setState(() {});
                                      },
                            validator: (value){
-                            if (value == null || value.isEmpty) {
-                              return 'Nama tidak boleh kosong';
+                            if (value == null || value.isEmpty || value.length < 3 ) {
+                              return 'Nama tidak boleh kurang dari 3 karakter';
                             }
                             return null;
                            },
@@ -61,10 +61,14 @@ class _DummyBoxState extends State<DummyBox> {
                             await prefs.setStringList('name', updatedList);
                             widget.onNameListChanged(updatedList);
                             // ignore: avoid_print
-                            print('Name saved: ${prefs.getStringList('name')}');
-                            nameController.clear(); 
+                            if (_formKey.currentState!.validate()) {
+                              // ignore: avoid_print
+                              print('Name saved: ${prefs.getStringList('name')}');
+                              nameController.clear();
                             // ignore: use_build_context_synchronously
                             Navigator.pop(context);
+                            }
+                            
                           },
                           child: const Text('Save Name')),
                       const SizedBox(height: 20),
