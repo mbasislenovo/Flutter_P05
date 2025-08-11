@@ -1,7 +1,6 @@
 # flutter_p05 (Tugas dari ART181-31149 Retno)
 
-Validator belum berjalan sebagaimana mestinya. 
-Perlu diperbaiki codingan mengenai validator.
+Telah berhasil diperbaiki codingan mengenai validator.
 
 Soal aslinya:
 Praktik Kodingan Latihan 5
